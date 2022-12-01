@@ -1,0 +1,14 @@
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 80vw;
+        margin: 0 auto;
+        background: var(--marine);
+
+        &:hover {
+                opacity: 0.8;
+        }
+}
