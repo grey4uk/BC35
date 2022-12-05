@@ -1,3 +1,1 @@
-import { getRandomInt } from './getRandomNumber';
-
-export { getRandomInt };
+export { default } from './getRandomNumber';
