@@ -1,0 +1,12 @@
+------------------LifeCycles-----------------------------
+https://dog.ceo/api/breeds/image/random/:amount
+
+1. constructor() {}
+2. static getDerivedStateFromProps(nextProps, prevState) {}
+3. render() {}
+4. componentDidMount() {}
+5. shouldComponentUpdate(nextProps, nextState) {}
+6. getSnapshotBeforeUpdate(prevProps, prevState) {}
+7. componentDidUpdate(prevProps, prevState, snapshot) {}
+8. componentWillUnmount() {}
+9. componentDidCatch(error, info) {}

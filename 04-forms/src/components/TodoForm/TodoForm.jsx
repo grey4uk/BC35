@@ -44,6 +44,7 @@ class TodoForm extends Component {
       ...this.state,
       id: uuid(),
     };
+    // delete newTodo.text;
     this.props.addTodo({ todo: newTodo });
 
     this.reset();
