@@ -1,0 +1,7 @@
+------------------LifeCycles-----------------------------
+https://dog.ceo/api/breeds/image/random/:amount
+https://pokeapi.co/api/v2/pokemon
+0. Винесення api
+1. Індикатор завантаження
+2. Обробка помилки
+3. Поділ відповідальності
