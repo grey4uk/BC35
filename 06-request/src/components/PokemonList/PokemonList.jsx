@@ -4,6 +4,7 @@ import { getPokemons } from 'services/pokeApi';
 
 class PokemonList extends Component {
   state = { pokemons: [] };
+  myPokemons = new PokemonApi();
 
   async componentDidMount() {
     const {
@@ -12,11 +13,11 @@ class PokemonList extends Component {
       endRequestSuccess,
       loaderOff,
     } = this.props.methods;
+
     try {
-      console.log('pokemons request');
       startRequest();
-      const pokemons = await getPokemons();
-      this.setState({ pokemons });
+      await myPokemons.getPokemons();
+      this.setState({ pokemons: myPokemons.pokemons });
       endRequestSuccess();
     } catch (error) {
       endRequestError({
@@ -25,6 +26,26 @@ class PokemonList extends Component {
       });
     }
     loaderOff();
+
+    // const {
+    //   startRequest,
+    //   endRequestError,
+    //   endRequestSuccess,
+    //   loaderOff,
+    // } = this.props.methods;
+    // try {
+    //   console.log('pokemons request');
+    //   startRequest();
+    //   const pokemons = await getPokemons();
+    //   this.setState({ pokemons });
+    //   endRequestSuccess();
+    // } catch (error) {
+    //   endRequestError({
+    //     component: 'pokemons',
+    //     text: error.message,
+    //   });
+    // }
+    // loaderOff();
   }
 
   render() {
