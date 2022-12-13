@@ -1,0 +1,8 @@
+.imagesList {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 60px;
+        width: 80vw;
+        margin: 0 auto;
+}
