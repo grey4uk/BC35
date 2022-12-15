@@ -1,0 +1,10 @@
+- Концепція SPA (Single Page Application) и CSR (Client Side Rendering)
+- Компоненти BrowserRouter, Route, Rotes
+- Обробка 404 з Navigate
+- Компоненти Link и NavLink
+- Вкладені маршрути і навігація
+- Динамічні URL-параметри
+- Хуки useParams
+- Параметри адресної строки в useLocation ( useLocation )
+- Программна навігація з useNavigate
+- Структура url-строки и HTML5 History API
