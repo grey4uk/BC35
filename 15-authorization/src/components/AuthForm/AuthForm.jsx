@@ -1,8 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { ReactComponent as Google } from 'assets/google.svg';
+import { useDispatch } from 'react-redux';
+import { authByGoogle } from 'redux/auth/operations/auth-operations';
 
 function AuthForm() {
+  const dispatch = useDispatch();
+
+  const handleAuthByGoogle = () => dispatch(authByGoogle());
+
   return (
     <div
       style={{
@@ -49,7 +55,10 @@ function AuthForm() {
           <Form.Text className='text-muted'>
             or authorize by google
           </Form.Text>
-          <Button variant='primary' type='button'>
+          <Button
+            variant='primary'
+            type='button'
+            onClick={handleAuthByGoogle}>
             <Google
               style={{ width: '24px', height: '24px' }}
             />

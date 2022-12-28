@@ -1,5 +1,5 @@
 {
-  "name": "01-components",
+  "name": "authorization",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
+    "firebase": "^9.15.0",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.5",
     "prop-types": "^15.8.1",
