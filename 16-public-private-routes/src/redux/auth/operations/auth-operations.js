@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import firebase from 'services/firebase.config';
 import {
   offRefreshing,
-  onRefreshing,
   setUser,
 } from '../slice/auth-slice';
 const {
@@ -33,11 +32,8 @@ export const authByGoogle = createAsyncThunk(
 export const refreshUser = createAsyncThunk(
   'auth/refresh-user',
   async (_, { dispatch, rejectWithValue }) => {
-    dispatch(onRefreshing());
     try {
-      console.log('refresh');
       onAuthStateChanged(auth, (user) => {
-        console.log('user :>> ', user);
         if (user) {
           const currentUser = {
             name: user?.displayName,
@@ -45,6 +41,8 @@ export const refreshUser = createAsyncThunk(
             email: user?.email,
           };
           dispatch(setUser(currentUser));
+        } else {
+          dispatch(offRefreshing());
         }
       });
     } catch (error) {

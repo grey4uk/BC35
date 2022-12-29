@@ -26,15 +26,15 @@ const App = () => {
   const isRefreshing = useSelector(isRefreshingSelector);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  useLayoutEffect(() => {
-    isAuth &&
-      setTimeout(() => {
-        dispatch(offRefreshing());
-      }, 400);
-    isAuth ? navigate('/home') : navigate('/auth');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuth]);
+  console.log('isAuth', isAuth);
+  // useLayoutEffect(() => {
+  //   isAuth &&
+  //     setTimeout(() => {
+  //       dispatch(offRefreshing());
+  //     }, 400);
+  //   isAuth ? navigate('/home') : navigate('/auth');
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [isAuth]);
 
   useEffect(() => {
     dispatch(refreshUser());

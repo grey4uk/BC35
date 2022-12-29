@@ -2,5 +2,5 @@
         "compilerOptions": {
           "baseUrl": "src"
         },
-        "include": ["src"]
+        "include": ["src", "../16-public-private-routes/src/pages/WelcomePage"]
       }
